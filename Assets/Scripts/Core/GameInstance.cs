@@ -12,6 +12,9 @@ namespace Assets.Scripts.Core
         public CoroutineService CoroutineService;
         public TimeSystem TimeSystem;
 
+
+        public GameObject InteractionCanvasPrefab;
+
         public GameInstance(GameInstanceConfig config)
         {
             if (Current != null)
@@ -28,6 +31,7 @@ namespace Assets.Scripts.Core
         {
             CoroutineService = coroutineService;
             TimeSystem = new TimeSystem(mConfig.TimeSystemConfig);
+            InteractionCanvasPrefab = mConfig.InteractionMenu;
         }
     }
 }

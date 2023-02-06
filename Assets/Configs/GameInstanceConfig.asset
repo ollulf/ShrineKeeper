@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: GameInstanceConfig
   m_EditorClassIdentifier: 
   TimeSystemConfig: {fileID: 11400000, guid: 781846dffd2d88b428655284993812f6, type: 2}
+  InteractionMenu: {fileID: 5042437239604154960, guid: a237233382a3c5d4c9f09e6d3bcfd80e, type: 3}

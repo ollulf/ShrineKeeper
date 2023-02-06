@@ -63,7 +63,7 @@ namespace Assets.Scripts.Core
                     CurrentTime.Hour = currentHour;
                     CurrentTime.Minute = currentMinute;
 
-                    Debug.Log($"Day: {CurrentTime.Day} || Time: {CurrentTime.Hour}:{CurrentTime.Minute}");
+                  //  Debug.Log($"Day: {CurrentTime.Day} || Time: {CurrentTime.Hour}:{CurrentTime.Minute}");
                 }
 
                 //HourPassed

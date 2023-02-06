@@ -6,5 +6,8 @@ namespace Assets.Scripts.Core.CoreConfigs
     public class GameInstanceConfig : ScriptableObject
     {
         public TimeSystemConfig TimeSystemConfig;
+
+        [Header("UI Prefabs")]
+        public GameObject InteractionMenu;
     }
 }
