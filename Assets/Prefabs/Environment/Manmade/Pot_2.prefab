@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365194, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_Size.y
-      value: 1.002616
+      value: 1.0335469
       objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365194, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_Offset.x
@@ -25,11 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365194, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_Offset.y
-      value: 0.007817671
+      value: 0.48381677
       objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365194, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365194, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -93,19 +93,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365199, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_Size.y
-      value: 0.52596927
+      value: 0.5019116
       objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365199, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_Offset.x
-      value: 0.0028546005
+      value: 0.0028545856
       objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365199, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_Offset.y
-      value: -0.19513726
+      value: 0.24649343
       objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365199, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365199, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
