@@ -1,0 +1,16 @@
+{
+    "name": "Navigation2D.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:114138cb31f4a5c40bcce45f3e35c40b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

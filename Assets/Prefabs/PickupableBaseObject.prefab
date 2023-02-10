@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6145129835752365197}
   - component: {fileID: 6145129835752365199}
   - component: {fileID: 6145129835752365194}
+  - component: {fileID: -7400240160028895965}
+  - component: {fileID: -7042818158383875224}
   m_Layer: 6
   m_Name: PickupableBaseObject
   m_TagString: Untagged
@@ -165,3 +167,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &-7400240160028895965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6145129835752365192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e183042d1590b4cb14fb783ca21c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interactions: 01000000
+--- !u!114 &-7042818158383875224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6145129835752365192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89a5e41588bd4a408e55221b1366199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shape: 1
+  center: {x: 0, y: 0}
+  size: {x: 1, y: 1}
+  carve: 1

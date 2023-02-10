@@ -64,6 +64,7 @@ namespace Assets.Scripts.Player
         public void DropItem(GameObject objectToDrop)
         {
             objectToDrop.transform.parent = null;
+            objectToDrop.GetComponent<ObjectLayerer>().UpdateLayering();
             heldItem = null;
         }
     }

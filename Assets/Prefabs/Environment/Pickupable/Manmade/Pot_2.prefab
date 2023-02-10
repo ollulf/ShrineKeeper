@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7042818158383875224, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
+      propertyPath: size.x
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: -7042818158383875224, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
+      propertyPath: size.y
+      value: 0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: -7042818158383875224, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
+      propertyPath: center.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6145129835752365192, guid: 70f93ede675a68b4e86c7cb82ec242ff, type: 3}
       propertyPath: m_Name
       value: Pot_2

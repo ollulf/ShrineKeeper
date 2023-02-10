@@ -199,4 +199,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  fadeTime: 0.5
+  fadeTime: 0.3
