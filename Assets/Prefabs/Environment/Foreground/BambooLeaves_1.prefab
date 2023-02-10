@@ -7,9 +7,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4849410935994001375, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
+      propertyPath: m_Size.x
+      value: 2.6419783
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849410935994001375, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
+      propertyPath: m_Size.y
+      value: 2.1194997
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849410935994001375, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.041850567
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849410935994001375, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.019101143
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849410935994001375, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849410935994001375, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849410935994001375, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.375
+      objectReference: {fileID: 0}
+    - target: {fileID: -4849410935994001375, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.875
+      objectReference: {fileID: 0}
     - target: {fileID: 4509023959107555468, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
       propertyPath: m_Name
-      value: BambooLeafs_1
+      value: BambooLeaves_1
       objectReference: {fileID: 0}
     - target: {fileID: 4509023959107555470, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
       propertyPath: m_RootOrder
@@ -25,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4509023959107555470, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4509023959107555470, guid: cd35d8e41309f9c4b9317db850fcb837, type: 3}
       propertyPath: m_LocalRotation.w
