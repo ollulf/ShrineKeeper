@@ -10,7 +10,7 @@ namespace Assets.Scripts.Core
         private GameInstanceConfig mConfig;
 
         public CoroutineService CoroutineService;
-        public TimeSystem TimeSystem;
+        public TimeHandler TimeSystem;
 
 
         public GameObject InteractionCanvasPrefab;
@@ -30,7 +30,7 @@ namespace Assets.Scripts.Core
         public void Initialize(CoroutineService coroutineService)
         {
             CoroutineService = coroutineService;
-            TimeSystem = new TimeSystem();
+            TimeSystem = TimeHandler.Instance;
             InteractionCanvasPrefab = mConfig.InteractionMenu;
         }
     }
