@@ -13,6 +13,8 @@ namespace Assets.Scripts.Core
         {
             mGameInstance = new GameInstance(Config);
             mGameInstance.Initialize(CoroutineService);
+
+            var creatureHandler = CreatureHandler.Instance;
         }
     }
 }

@@ -82,6 +82,7 @@ public class SingletonResourceTracker : Singleton<SingletonResourceTracker>
     }
     public static UnityEngine.Object[] LoadAll(SingletonType type)
     {
+
         var path = TypeToPath(type);
         UnityEngine.Object[] loadedObjects = Resources.LoadAll(path);
         return loadedObjects;

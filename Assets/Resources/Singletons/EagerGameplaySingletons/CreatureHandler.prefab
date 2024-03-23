@@ -46,5 +46,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldSpawnCreatures: 0
   creatureTargetCount: 0
-  creatureDummy: {fileID: 0}
-  currentTime: 0
+  activeCreatures: []
+  currentTimeOfDay: 0
+  creatureTargetAmount: 0
+  creatureTargetAmountOver24HourDayCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 12
+      inSlope: -0.048519135
+      outSlope: -0.048519135
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.20569621
+    - serializedVersion: 3
+      time: 6
+      value: 0
+      inSlope: -2
+      outSlope: Infinity
+      tangentMode: 101
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 20
+      value: 0
+      inSlope: -0.004900222
+      outSlope: 3
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.306962
+    - serializedVersion: 3
+      time: 24
+      value: 12
+      inSlope: 0.01899844
+      outSlope: 0.01899844
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.39398766
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
