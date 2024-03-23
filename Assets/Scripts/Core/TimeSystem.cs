@@ -6,8 +6,6 @@ namespace Assets.Scripts.Core
 {
     public class TimeSystem
     {
-        private TimeSystemConfig mConfig;
-
         public Time CurrentTime;
         public bool TimePaused = false;
         public class Time
@@ -15,16 +13,23 @@ namespace Assets.Scripts.Core
             public int Day;
             public int Hour;
             public int Minute;
+
+            public const int HoursPerDay = 24;
+
+            public const int MinutesPerHour = 60;
+
+            public const float MinuteDurationInRealSeconds = 0.05f;
             public Time(int day, int hour, int minute)
             {
                 Day = day;
                 Hour = hour;
                 Minute = minute;
             }
+
+            public float TimeOfDayAs24Float => Hour + ((float)Minute / MinutesPerHour);
         }
-        public TimeSystem(TimeSystemConfig config)
+        public TimeSystem()
         {
-            mConfig = config;
             GameInstance.Current.CoroutineService.RunCoroutine(InitializeTime());
         }
 
@@ -50,12 +55,12 @@ namespace Assets.Scripts.Core
             var currentHour = 0;
             int currentMinute;
 
-            for (var i = 0; i < mConfig.HoursPerDay; i++)
+            for (var i = 0; i < Time.HoursPerDay; i++)
             {
                 currentMinute = 0;
-                for (int j = 0; j < mConfig.MinutesPerHour; j++)
+                for (int j = 0; j < Time.MinutesPerHour; j++)
                 {
-                    yield return new WaitForSeconds(mConfig.SecondsPerMinute);
+                    yield return new WaitForSeconds(Time.MinuteDurationInRealSeconds);
                     //Minute Passed
                     currentMinute++;
 
@@ -63,13 +68,9 @@ namespace Assets.Scripts.Core
                     CurrentTime.Hour = currentHour;
                     CurrentTime.Minute = currentMinute;
 
-                  //  Debug.Log($"Day: {CurrentTime.Day} || Time: {CurrentTime.Hour}:{CurrentTime.Minute}");
                 }
-
-                //HourPassed
                 currentHour++;
             }
-            //DayPassed
         }
     }
 

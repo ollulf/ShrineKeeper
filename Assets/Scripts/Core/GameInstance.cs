@@ -30,7 +30,7 @@ namespace Assets.Scripts.Core
         public void Initialize(CoroutineService coroutineService)
         {
             CoroutineService = coroutineService;
-            TimeSystem = new TimeSystem(mConfig.TimeSystemConfig);
+            TimeSystem = new TimeSystem();
             InteractionCanvasPrefab = mConfig.InteractionMenu;
         }
     }

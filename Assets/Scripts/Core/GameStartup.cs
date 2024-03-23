@@ -6,7 +6,7 @@ namespace Assets.Scripts.Core
     public class GameStartup : MonoBehaviour
     {
         public GameInstanceConfig Config;
-        public CoroutineService CoroutineService;
+        public CoroutineService CoroutineService;        
         private GameInstance mGameInstance;
 
         void Start()
