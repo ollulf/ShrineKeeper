@@ -3,7 +3,7 @@ guid: 58437a8e513f63e47a76bd002321fa39
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -607,6 +608,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ShrineCore
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 152
+        width: 55
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c9417299be89941828a43ca10c2669
+      internalID: 565603105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonationBox
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 152
+        width: 13
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062c61d4d73d1fc4eaa50e7b7cb2bd3c
+      internalID: -616202068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -618,30 +661,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pot_1: -1635231215
-      Pot_3: 309863236
-      Small_Shrine_3: 1139794961
-      Bamboo_Top_1: 153062904
-      Well_1: 199056106
       Altar_1: 1405869764
-      Small_Shrine_5: -1135052011
-      MossStones_2: -231410491
-      Bamboo_2: -1281997710
-      Bamboo_Top_2: -416317603
-      Small_Shrine_6: -1825126621
-      Small_Shrine_1: 1907014801
-      Small_Shrine_: 1090866180
-      Small_Shrine_4: -304973950
-      Pot_4: -803071969
-      Lamp_2: -1321402041
       Bamboo_1: -1689919853
-      Small_Shrine_2: -1315202725
-      SandGround: -539233887
+      Bamboo_2: -1281997710
+      Bamboo_Top_1: 153062904
+      Bamboo_Top_2: -416317603
+      Carved_Stone_1: -557204181
+      DonationBox: -616202068
       Fireplace_1: 146101347
       Lamp_1: -1946718589
-      Pot_2: 1171331062
-      Carved_Stone_1: -557204181
+      Lamp_2: -1321402041
       MossStones_1: 609006809
+      MossStones_2: -231410491
+      Pot_1: -1635231215
+      Pot_2: 1171331062
+      Pot_3: 309863236
+      Pot_4: -803071969
+      SandGround: -539233887
+      ShrineCore: 565603105
+      Small_Shrine_: 1090866180
+      Small_Shrine_1: 1907014801
+      Small_Shrine_2: -1315202725
+      Small_Shrine_3: 1139794961
+      Small_Shrine_4: -304973950
+      Small_Shrine_5: -1135052011
+      Small_Shrine_6: -1825126621
+      Well_1: 199056106
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
