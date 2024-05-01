@@ -6,13 +6,9 @@ using UnityEngine;
 [Serializable]
 public class Resource
 {
-    private enum ResourceType { Undefined, Gold }
+    public enum Type { Undefined, Gold, Faith}
 
-    [SerializeField] private ResourceType scoreType = ResourceType.Undefined;
-
-
-    [SerializeField] private string name = "";
-    public string Name { get => name; }
+    [SerializeField] public Type type = Type.Undefined;
 
 
     [SerializeField] private int amount = 0;

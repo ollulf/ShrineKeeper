@@ -22,12 +22,17 @@ public class NPC : MonoBehaviour
 
     void Start()
     {
-        LookForGoal();
+        PrayingRoutine();
     }
 
-    private void LookForGoal()
+    private void PrayingRoutine()
     {
-        agent.SetDestination(new Vector2(10, 10));
+        var interactable = NPCInteractableManager.GetFirstInteractable(typeof(PrayingShrine));
+
+        if (interactable == null)
+            return;
+
+        agent.SetDestination(interactable.GetInteractionLocations()[0].position);
     }
 
     // Update is called once per frame

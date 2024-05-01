@@ -18,10 +18,25 @@ public class ResourceHandler : MonoBehaviour
         }
     }
 
-    [SerializeField] private Resource[] resources;  
+    [SerializeField] private Dictionary <Resource.Type, Resource> resources = new();
 
-    public Resource [] getResources()
+    internal static void AddResource(Resource.Type type, int v)
     {
-        return null;
+        Instance.GetResource(type).Amount = v;
+    }
+
+    private Resource GetResource(Resource.Type type)
+    {
+        if (Instance.resources.TryGetValue(type, out Resource value))
+        {
+            return value;
+        }
+
+        Resource newResource = new();
+        newResource.type = type;
+
+        Instance.resources.Add(type, newResource);
+
+        return newResource;
     }
 }

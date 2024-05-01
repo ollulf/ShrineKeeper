@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,7 @@ public class ScoresHandler : MonoBehaviour
         }
     }
 
-    [SerializeField] private Score[] resources;
+    [SerializeField] private Score[] scores;
 
     public Score[] getScores()
     {
