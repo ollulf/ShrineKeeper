@@ -15,8 +15,12 @@ public class PrayingShrine : MonoBehaviour, INPCInteractable
         return interactLocations;
     }
 
-    public void Interact(NPC npc)
+    public IEnumerator Interact(NPC npc)
     {
         ResourceHandler.AddResource(Resource.Type.Faith, 10);
+
+        Debug.Log(npc + " interacted with " + this);
+
+        yield break;
     }
 }

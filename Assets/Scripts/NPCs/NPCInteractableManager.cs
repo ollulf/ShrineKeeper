@@ -5,7 +5,6 @@ using System;
 
 public class NPCInteractableManager : MonoBehaviour
 {
-
     public static NPCInteractableManager Instance { get; private set; }
 
     private void Awake()

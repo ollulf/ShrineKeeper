@@ -2,11 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using NavMeshPlus;
 
 public class NPC : MonoBehaviour
 {
-    public enum Goal {Idle, Walk, Pray, Donate} 
+    public enum Goal {Idle, Walk, Pray, Donate}
+
+
+    [Header("Wander Settings")]
+    [SerializeField] private int wanderDistance = 2;
+    [SerializeField] private int idleTime = 3;
 
     [SerializeField] private Goal goal = Goal.Idle;
 
@@ -22,22 +28,88 @@ public class NPC : MonoBehaviour
 
     void Start()
     {
-        PrayingRoutine();
+        TryInteract(typeof(PrayingShrine));
     }
 
-    private void PrayingRoutine()
+    //Defines the NPC behaviour
+    private void ChooseNextInteraction()
     {
-        var interactable = NPCInteractableManager.GetFirstInteractable(typeof(PrayingShrine));
+        Wander(idleTime);
+    }
+
+    private void TryInteract(Type type)
+    {
+        StartCoroutine(InteractRoutine(type));
+    }
+
+    private void Wander (int time)
+    {
+        StartCoroutine(WanderCoroutine(time));
+    }
+
+    //Coroutines
+
+    private IEnumerator WanderCoroutine(int time)
+    {
+        // get random position
+        Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * wanderDistance;
+        randomDirection += transform.position;
+
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomDirection, out hit, wanderDistance, 1);
+        Vector2 finalPosition = hit.position;
+
+        agent.SetDestination(finalPosition);
+
+        // wait until reached position
+        while (!agent.reachedDestination)
+        {
+            yield return null;
+        }
+
+        float elapsedTime = 0;
+
+        // waits until idle time done
+        while(time > elapsedTime)
+        {
+            elapsedTime += Time.deltaTime;
+        }
+
+        OnInteractionFinished();
+    }
+
+    private IEnumerator InteractRoutine(Type type)
+    {
+        yield return null;
+
+        var interactable = NPCInteractableManager.GetFirstInteractable(type);
 
         if (interactable == null)
-            return;
+        {
+            Debug.Log("Could not find interactable " + type + " in level");
+            OnInteractionFinished();
+            yield break;
+        }
 
         agent.SetDestination(interactable.GetInteractionLocations()[0].position);
+
+        while (!agent.reachedDestination)
+        {
+            //Debug.Log(agent.remainingDistance);
+
+            yield return null;
+        }
+
+        Debug.Log(this.name + " reached interact destination");
+
+        yield return StartCoroutine(interactable.Interact(this));
+
+        OnInteractionFinished();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnInteractionFinished()
     {
-        
+        ChooseNextInteraction();
     }
 }

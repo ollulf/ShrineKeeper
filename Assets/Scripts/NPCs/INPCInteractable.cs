@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface INPCInteractable
 {
-    public void Interact(NPC npc);
+    public IEnumerator Interact(NPC npc);
     public Transform [] GetInteractionLocations(); 
 }

@@ -30,6 +30,8 @@ public class NavMeshAgent2D : MonoBehaviour
     [Header("Pathfinding")]
     [SerializeField] bool _autoRepath = true;
 
+    private bool _reachedDestination = false;
+
     // the projection
     public NavMeshAgent agent;
 
@@ -110,6 +112,12 @@ public class NavMeshAgent2D : MonoBehaviour
             agent.Warp(teleportPositon);
         }
         // =============================================
+
+        // check if reached destination
+        if (stoppingDistance > remainingDistance && hasPath)
+            _reachedDestination = true;
+        else
+            _reachedDestination = false;
     }
 
     void LateUpdate()
@@ -221,6 +229,11 @@ public class NavMeshAgent2D : MonoBehaviour
     {
         get { return agent.isStopped; }
         set { agent.isStopped = value; }
+    }
+
+    public bool reachedDestination
+    {
+        get { return _reachedDestination; }
     }
 
     public ObstacleAvoidanceType obstacleAvoidanceType
