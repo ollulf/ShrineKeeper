@@ -12,7 +12,7 @@ public class NPC : MonoBehaviour
 
     [Header("Wander Settings")]
     [SerializeField] private int wanderDistance = 2;
-    [SerializeField] private int idleTime = 3;
+    [SerializeField] private int idleTimeMin = 3, idleTimeMax = 10;
 
     [SerializeField] private Goal goal = Goal.Idle;
 
@@ -34,7 +34,7 @@ public class NPC : MonoBehaviour
     //Defines the NPC behaviour
     private void ChooseNextInteraction()
     {
-        Wander(idleTime);
+        Wander(UnityEngine.Random.Range(idleTimeMin, idleTimeMax));
     }
 
     private void TryInteract(Type type)
@@ -51,13 +51,30 @@ public class NPC : MonoBehaviour
 
     private IEnumerator WanderCoroutine(int time)
     {
+        float elapsedTime = 0;
+
+        // waits until idle time done
+        while (time > elapsedTime)
+        {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
         // get random position
         Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * wanderDistance;
         randomDirection += transform.position;
 
         NavMeshHit hit;
-        NavMesh.SamplePosition(randomDirection, out hit, wanderDistance, 1);
-        Vector2 finalPosition = hit.position;
+        while (!NavMesh.SamplePosition(randomDirection, out hit, wanderDistance, 1))
+        {
+            randomDirection = UnityEngine.Random.insideUnitSphere * wanderDistance;
+            randomDirection += transform.position;
+
+            yield return null;
+        }
+
+        Vector2 finalPosition = NavMeshUtils2D.ProjectTo2D(hit.position);
+        //Debug.Log("Next Go To Position: " + finalPosition);
 
         agent.SetDestination(finalPosition);
 
@@ -67,12 +84,13 @@ public class NPC : MonoBehaviour
             yield return null;
         }
 
-        float elapsedTime = 0;
+        elapsedTime = 0;
 
         // waits until idle time done
         while(time > elapsedTime)
         {
             elapsedTime += Time.deltaTime;
+            yield return null;
         }
 
         OnInteractionFinished();
