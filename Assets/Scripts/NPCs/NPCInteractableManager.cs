@@ -3,23 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class NPCInteractableManager : MonoBehaviour
+[SingletonSettings(SingletonLifetime.Scene, _canBeGenerated: true, _eager: false)]
+public class NPCInteractableManager : SingletonBehaviour<NPCInteractableManager>
 {
-    public static NPCInteractableManager Instance { get; private set; }
-
-    private void Awake()
-    {
-        // If there is an instance, and it's not me, delete myself.
-
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
 
     private Dictionary <Type, List<INPCInteractable>> interactables = new();
 

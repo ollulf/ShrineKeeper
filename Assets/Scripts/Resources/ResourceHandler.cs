@@ -2,22 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceHandler : MonoBehaviour
+[SingletonSettings(SingletonLifetime.Scene, _canBeGenerated: true, _eager: false)]
+public class ResourceHandler : SingletonBehaviour<ResourceHandler>
 {
-    public static ResourceHandler Instance { get; private set; }
-
-    private void Awake()
-    {
-        if(Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
-
     private Dictionary <Resource.Type, Resource> resources = new();
 
     internal static void AddResource(Resource.Type type, int v)

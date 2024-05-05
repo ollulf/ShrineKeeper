@@ -24,7 +24,7 @@ namespace Assets.Scripts.Core
 
             public const int MinutesPerHour = 60;
 
-            public const float MinuteDurationInRealSeconds = 0.05f;
+            public const float MinuteDurationInRealSeconds = 0.3f;
             public Time(int day, int hour, int minute)
             {
                 Day = day;
