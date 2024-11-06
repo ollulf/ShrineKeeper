@@ -34,6 +34,12 @@ public class NPC : MonoBehaviour
 
         StartCoroutine(ChooseNextInteraction());
     }
+    
+    private void OnDrawGizmos()
+    {
+        if (Application.isPlaying)
+            UnityEditor.Handles.Label(transform.position, actionsequence[actionIndex].GetType().ToString());
+    }
 
     //Defines the NPC behaviour
     private IEnumerator ChooseNextInteraction()

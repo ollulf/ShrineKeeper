@@ -12,7 +12,7 @@ public class NPCSpawner : MonoBehaviour
     {
         var spawnTransforms = NPCInteractableManager.GetInteractables(typeof (NPCSpawnPoint));
 
-        Instantiate(NpcPrefab, spawnTransforms [Random.Range(0, spawnTransforms.Count-1)].GetInteractionLocations()[0].position, Quaternion.identity, gameObject.transform);
+        Instantiate(NpcPrefab, spawnTransforms [Random.Range(0, spawnTransforms.Count-1)].GetInteractionLocations()[0].position, Quaternion.identity);
     }
 
 }

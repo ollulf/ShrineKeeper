@@ -29,7 +29,7 @@ public class TryInteract : Action
             yield break;
         }
 
-        agent.SetDestination(interactable.GetInteractionLocations()[0].position);
+        agent.SetDestination(NavMeshUtils2D.ProjectTo2D(interactable.GetInteractionLocations()[0].position));
 
         while (!agent.reachedDestination)
         {
